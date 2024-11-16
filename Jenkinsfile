@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:your-username/your-repo.git'
+                git branch: 'main', url: 'https://github.com/muzafferkoluman/wildrydes-site.git'
             }
         }
 
@@ -29,8 +29,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                # Deploy adımlarınızı buraya ekleyin.
-                # Örneğin, SCP ile dosyaları sunucuya taşıyabilirsiniz.
+                # Deploy komutlarınızı buraya ekleyin
+                # Örneğin:
+                # scp -r ./build/ user@server:/path/to/deploy/
                 '''
             }
         }
@@ -41,7 +42,7 @@ pipeline {
             echo 'Pipeline başarıyla tamamlandı!'
         }
         failure {
-            echo 'Pipeline başarısız oldu.'
+            echo 'Pipeline başarısız oldu!'
         }
     }
 }
