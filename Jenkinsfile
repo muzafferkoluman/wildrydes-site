@@ -34,6 +34,12 @@ pipeline {
                 '''
             }
         }
+        stage('Debug PATH') {
+            steps {
+                sh 'echo $PATH'
+         }
+}
+
     }
 
     post {
