@@ -29,9 +29,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                # Deploy komutlarınızı buraya ekleyin
-                # Örneğin:
-                # scp -r ./build/ user@server:/path/to/deploy/
+                # Buraya dağıtım komutlarınızı ekleyin
+                # Örneğin, build dizinini bir sunucuya taşıyabilirsiniz.
                 '''
             }
         }
